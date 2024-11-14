@@ -23,6 +23,7 @@
  * 
 */
 
+const section2 = document.querySelector('#section2');
 
 /**
  * End Global Variables
