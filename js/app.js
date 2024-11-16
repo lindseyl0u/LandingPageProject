@@ -25,6 +25,7 @@
 
 const section2 = document.querySelector('#section2');
 const navbarList = document.querySelector('#navbar_list');
+const section1 = document.querySelector('#section1');
 
 /**
  * End Global Variables
