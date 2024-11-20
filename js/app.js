@@ -59,4 +59,3 @@ function makeActive() {
 document.addEventListener('scroll', function() { 
     makeActive();
 });
-
