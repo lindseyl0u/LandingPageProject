@@ -18,15 +18,15 @@
  * Great to have comments before crucial code sections within the procedure.
 */
 
-/**
- * Define Global Variables
- * 
-*/
+/* Define Global Variables */
+const navbarList = document.querySelector('#navbar__list');
+const navbarListItems = navbarList.childNodes;
+const sections = document.querySelectorAll('section');
+const listItems = document.querySelectorAll('li');
+/* End Global Variables */
 
 
-/**
- * End Global Variables
- * Start Helper Functions
+ /* Start Helper Functions
  * 
 */
 
