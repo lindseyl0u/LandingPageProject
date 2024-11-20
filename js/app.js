@@ -26,20 +26,21 @@ const listItems = document.querySelectorAll('li');
 /* End Global Variables */
 
 
- /* Start Helper Functions
- * 
-*/
+ /* Functions */
 
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
+// Function to create the navigation bar and set the smooth scroll feature
+function createNav() {
+    sections.forEach(section => {
+        const newLi = document.createElement("li");
+        newLi.innerHTML = `<a href="#${section.id}" class="menu__link">${section.dataset.nav}</a>`;
+        newLi.addEventListener('click', function(event) {
+            event.preventDefault();
+            section.scrollIntoView({behavior: "smooth"});
+        });
+        navbarList.appendChild(newLi);
+    });
+};
+createNav();
 
 // Add class 'active' to section when near top of viewport
 
