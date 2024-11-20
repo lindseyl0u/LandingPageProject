@@ -23,7 +23,6 @@ const navbarList = document.querySelector('#navbar__list');
 const navbarListItems = navbarList.childNodes;
 const sections = document.querySelectorAll('section');
 const listItems = document.querySelectorAll('li');
-/* End Global Variables */
 
 
  /* Functions */
@@ -42,22 +41,22 @@ function createNav() {
 };
 createNav();
 
-// Add class 'active' to section when near top of viewport
+// Function to set sections as active
+function makeActive() {
+    for (section of sections) {
+        const sectionId = section.id.slice(7, 8);
+        const box = section.getBoundingClientRect();
+        if (box.top <= 150 && box.bottom >= 150) {
+            section.classList.add('your-active-class');
+            navbarListItems[sectionId].classList.add('active-tab');
+        } else {
+            section.classList.remove('your-active-class');
+            navbarListItems[sectionId].classList.remove('active-tab');
+        };
+    };
+};
 
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
+document.addEventListener('scroll', function() { 
+    makeActive();
+});
 
